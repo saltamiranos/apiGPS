@@ -25,6 +25,7 @@ server.on('connection', (conn) => {
     });
 });
 //configure server to listen on PORT
-server.listen(8080, () => {
-    console.log('Server started on port %s at %s', server.address().port, server.address().address);
+const ip = '172.26.4.16';
+server.listen(8080, ip, () => {
+    console.log('Server started on port %s at %s', server.address().port, ip);
 });
