@@ -12,8 +12,10 @@ server.on('connection', (conn) => {
             //do something with res.data
  
             //return acknowledgement
-            conn.write(res.ack);
+            //conn.write(res.ack);
+         console.log('Desifrar data from connection %s: %j', res, res.ack);
         } else {
+         console.log('Error Desifrar data from connection %s: %j', res, res.ack);
             //do something with res.error
         }
     });
